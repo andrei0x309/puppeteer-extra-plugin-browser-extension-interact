@@ -1,0 +1,70 @@
+{
+  "name": "puppeteer-extra-plugin-browser-extension-interact",
+  "version": "1.0.1",
+  "description": "Puppeteer extra plugin to interact with browser extensions, highly experimental.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "andrei0x309/puppeteer-extra-plugin-browser-extension-interact",
+  "author": "andrei0x309 <andrei@flashsoft.eu>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs": "node -e 0",
+    "lint": "eslint ./src  --ext .ts",
+    "lint-fix": "eslint ./src --fix  --ext .ts",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint",
+    "preversion": "yarn lint",
+    "release": "yarn preversion && yarn config set version-tag-prefix puppeteer-extra-plugin-browser-extension-interact@v &&  yarn config set version-git-message 'puppeteer-extra-plugin-browser-extension-interact@v%s' && yarn version --patch && yarn postversion",
+    "postversion": "git push && git push --tags",
+    "build": "tsc --project ."
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "puppeteer",
+    "puppeteer-extra",
+    "puppeteer-extra-plugin",
+    "browser-extension",
+    "browser-extention-interaction",
+    "action-page-interaction",
+    "headfull",
+    "pupeteer"
+  ],
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.7.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^23.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "puppeteer-core": "^13.3.1"
+  },
+  "dependencies": {
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin": "^3.2.0",
+    "typescript": "^4.5.2",
+    "yargs": "^17.3.1"
+  },
+  "bin": {
+    "puppeteer-ext-interact-plugin": "bin/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/andrei0x309/puppeteer-extra-plugin-browser-extension-interact/issues"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "homepage": "https://github.com/andrei0x309/puppeteer-extra-plugin-browser-extension-interact#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "gitHead": "babb041828cab50c525e0b9aab02d58f73416ef3"
+}
