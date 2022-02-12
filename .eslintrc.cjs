@@ -18,5 +18,6 @@ module.exports = {
       tsconfigRootDir: __dirname,
       project: ['./tsconfig.json'],
     },
-    ignorePatterns: ['.eslintrc.js', "**/demo_usage/**/*.js", "bin/**/*.js"]
+    ignorePatterns: ['.eslintrc.cjs', "**/demo_usage/**/*.js", "bin/**/*.js"]
   }
+  
