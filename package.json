@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-extra-plugin-browser-extension-interact",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Puppeteer extra plugin to interact with browser extensions, highly experimental.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
